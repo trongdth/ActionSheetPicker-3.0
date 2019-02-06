@@ -28,6 +28,7 @@
 		1CCA90801AE0EFC500368F5E /* DistancePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CCA906E1AE0EFC500368F5E /* DistancePickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1CCA90811AE0EFC500368F5E /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCA906F1AE0EFC500368F5E /* DistancePickerView.m */; };
 		1CCA90821AE0EFC500368F5E /* SWActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CCA90701AE0EFC500368F5E /* SWActionSheet.h */; };
+		2560AF5C220AF5A9007C94B0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2560AF5B220AF5A9007C94B0 /* XCTest.framework */; };
 		906291E61B5EA81C00A115DA /* ActionSheetMultipleStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 906291E41B5EA81C00A115DA /* ActionSheetMultipleStringPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		906291E71B5EA81C00A115DA /* ActionSheetMultipleStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 906291E51B5EA81C00A115DA /* ActionSheetMultipleStringPicker.m */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		1CCA906E1AE0EFC500368F5E /* DistancePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DistancePickerView.h; path = ../Pickers/DistancePickerView.h; sourceTree = "<group>"; };
 		1CCA906F1AE0EFC500368F5E /* DistancePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DistancePickerView.m; path = ../Pickers/DistancePickerView.m; sourceTree = "<group>"; };
 		1CCA90701AE0EFC500368F5E /* SWActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWActionSheet.h; path = ../Pickers/SWActionSheet.h; sourceTree = "<group>"; };
+		2560AF5B220AF5A9007C94B0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		906291E41B5EA81C00A115DA /* ActionSheetMultipleStringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActionSheetMultipleStringPicker.h; path = ../Pickers/ActionSheetMultipleStringPicker.h; sourceTree = "<group>"; };
 		906291E51B5EA81C00A115DA /* ActionSheetMultipleStringPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActionSheetMultipleStringPicker.m; path = ../Pickers/ActionSheetMultipleStringPicker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2560AF5C220AF5A9007C94B0 /* XCTest.framework in Frameworks */,
 				1CCA904F1AE0EFB000368F5E /* CoreActionSheetPicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +99,7 @@
 				1CCA90451AE0EFB000368F5E /* CoreActionSheetPicker */,
 				1CCA90521AE0EFB000368F5E /* CoreActionSheetPickerTests */,
 				1CCA90441AE0EFB000368F5E /* Products */,
+				2560AF5A220AF5A9007C94B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,6 +173,14 @@
 			);
 			name = Pickers;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		2560AF5A220AF5A9007C94B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2560AF5B220AF5A9007C94B0 /* XCTest.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
