@@ -28,8 +28,8 @@ class SWTableViewController: UITableViewController, UITextFieldDelegate {
         ActionSheetLocalePicker.show(withTitle: "Locale picker", initialSelection: nil, doneBlock: {
             picker, index in
 
-            print("index = \(index)")
-            print("picker = \(picker)")
+            print("index = \(String(describing: index))")
+            print("picker = \(String(describing: picker))")
             return
             }, cancel: { ActionStringCancelBlock in return }, origin: sender.superview!.superview)
 
@@ -40,9 +40,9 @@ class SWTableViewController: UITableViewController, UITextFieldDelegate {
         let datePicker = ActionSheetDatePicker(title: "Date:", datePickerMode: UIDatePicker.Mode.date, selectedDate: Date(), doneBlock: {
             picker, value, index in
 
-            print("value = \(value)")
-            print("index = \(index)")
-            print("picker = \(picker)")
+            print("value = \(String(describing: value))")
+            print("index = \(String(describing: index))")
+            print("picker = \(String(describing: picker))")
             return
         }, cancel: { ActionStringCancelBlock in return }, origin: sender.superview!.superview)
         let secondsInWeek: TimeInterval = 7 * 24 * 60 * 60;
@@ -71,9 +71,9 @@ class SWTableViewController: UITableViewController, UITextFieldDelegate {
         let datePicker = ActionSheetDatePicker(title: "DateAndTime:", datePickerMode: UIDatePicker.Mode.dateAndTime, selectedDate: Date(), doneBlock: {
             picker, value, index in
 
-            print("value = \(value)")
-            print("index = \(index)")
-            print("picker = \(picker)")
+            print("value = \(String(describing: value))")
+            print("index = \(String(describing: index))")
+            print("picker = \(String(describing: picker))")
             return
         }, cancel: { ActionStringCancelBlock in return }, origin: sender.superview!.superview)
         let secondsInWeek: TimeInterval = 7 * 24 * 60 * 60;
@@ -88,9 +88,9 @@ class SWTableViewController: UITableViewController, UITextFieldDelegate {
         let datePicker = ActionSheetDatePicker(title: "CountDownTimer:", datePickerMode: UIDatePicker.Mode.countDownTimer, selectedDate: Date(), doneBlock: {
             picker, value, index in
 
-            print("value = \(value)")
-            print("index = \(index)")
-            print("picker = \(picker)")
+            print("value = \(String(describing: value))")
+            print("index = \(String(describing: index))")
+            print("picker = \(String(describing: picker))")
             return
         }, cancel: { ActionStringCancelBlock in return }, origin: sender.superview!.superview)
 
@@ -102,9 +102,9 @@ class SWTableViewController: UITableViewController, UITextFieldDelegate {
         ActionSheetStringPicker.show(withTitle: "Nav Bar From Picker", rows: ["One", "Two", "A lot"], initialSelection: 1, doneBlock: {
             picker, value, index in
 
-            print("value = \(value)")
-            print("index = \(index)")
-            print("picker = \(picker)")
+            print("value = \(String(describing: value))")
+            print("index = \(String(describing: index))")
+            print("picker = \(String(describing: picker))")
             return
         }, cancel: { ActionStringCancelBlock in return }, origin: sender)
     }
@@ -116,9 +116,9 @@ class SWTableViewController: UITableViewController, UITextFieldDelegate {
             ], initialSelection: [2, 2], doneBlock: {
                 picker, values, indexes in
 
-                print("values = \(values)")
-                print("indexes = \(indexes)")
-                print("picker = \(picker)")
+                print("values = \(String(describing: values))")
+                print("indexes = \(String(describing: indexes))")
+                print("picker = \(String(describing: picker))")
                 return
             }, cancel: { ActionMultipleStringCancelBlock in return }, origin: sender)
 
