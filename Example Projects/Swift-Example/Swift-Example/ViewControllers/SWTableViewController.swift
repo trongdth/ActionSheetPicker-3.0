@@ -13,7 +13,7 @@ class SWTableViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet var UIDatePickerModeTime: UIButton!
     @IBAction func TimePickerClicked(_ sender: UIButton) {
 
-        let datePicker = ActionSheetDatePicker(title: "Time:", datePickerMode: UIDatePickerMode.time, selectedDate: Date(), target: self, action: #selector(SWTableViewController.datePicked(_:)), origin: sender.superview!.superview)
+        let datePicker = ActionSheetDatePicker(title: "Time:", datePickerMode: UIDatePicker.Mode.time, selectedDate: Date(), target: self, action: #selector(SWTableViewController.datePicked(_:)), origin: sender.superview!.superview)
 
         datePicker?.minuteInterval = 20
 
@@ -37,7 +37,7 @@ class SWTableViewController: UITableViewController, UITextFieldDelegate {
 
     @IBAction func DatePickerClicked(_ sender: UIButton) {
 
-        let datePicker = ActionSheetDatePicker(title: "Date:", datePickerMode: UIDatePickerMode.date, selectedDate: Date(), doneBlock: {
+        let datePicker = ActionSheetDatePicker(title: "Date:", datePickerMode: UIDatePicker.Mode.date, selectedDate: Date(), doneBlock: {
             picker, value, index in
 
             print("value = \(value)")
@@ -57,7 +57,7 @@ class SWTableViewController: UITableViewController, UITextFieldDelegate {
         distancePicker?.show()
     }
 
-    func measurementWasSelected(_ bigUnit: NSNumber, smallUnit: NSNumber, element: AnyObject) {
+    @objc func measurementWasSelected(_ bigUnit: NSNumber, smallUnit: NSNumber, element: AnyObject) {
         print("\(element)")
         print("\(smallUnit)")
         print("\(bigUnit)")
@@ -68,7 +68,7 @@ class SWTableViewController: UITableViewController, UITextFieldDelegate {
     @IBAction func DateAndTimeClicked(_ sender: UIButton) {
 
 
-        let datePicker = ActionSheetDatePicker(title: "DateAndTime:", datePickerMode: UIDatePickerMode.dateAndTime, selectedDate: Date(), doneBlock: {
+        let datePicker = ActionSheetDatePicker(title: "DateAndTime:", datePickerMode: UIDatePicker.Mode.dateAndTime, selectedDate: Date(), doneBlock: {
             picker, value, index in
 
             print("value = \(value)")
@@ -85,7 +85,7 @@ class SWTableViewController: UITableViewController, UITextFieldDelegate {
     }
 
     @IBAction func CountdownTimerClicked(_ sender: UIButton) {
-        let datePicker = ActionSheetDatePicker(title: "CountDownTimer:", datePickerMode: UIDatePickerMode.countDownTimer, selectedDate: Date(), doneBlock: {
+        let datePicker = ActionSheetDatePicker(title: "CountDownTimer:", datePickerMode: UIDatePicker.Mode.countDownTimer, selectedDate: Date(), doneBlock: {
             picker, value, index in
 
             print("value = \(value)")
@@ -123,7 +123,7 @@ class SWTableViewController: UITableViewController, UITextFieldDelegate {
             }, cancel: { ActionMultipleStringCancelBlock in return }, origin: sender)
 
 
-        acp?.pickerTextAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 8.0)]
+        acp?.pickerTextAttributes = [NSAttributedString.Key.font.rawValue: UIFont.systemFont(ofSize: 8.0)]
         acp?.setTextColor(UIColor.red)
         acp?.pickerBackgroundColor = UIColor.black
         acp?.toolbarBackgroundColor = UIColor.yellow
@@ -132,8 +132,8 @@ class SWTableViewController: UITableViewController, UITextFieldDelegate {
     }
 
 
-    func datePicked(_ obj: Date) {
-        UIDatePickerModeTime.setTitle(obj.description, for: UIControlState())
+    @objc func datePicked(_ obj: Date) {
+        UIDatePickerModeTime.setTitle(obj.description, for: UIControl.State())
     }
 
     override func viewDidLoad() {
