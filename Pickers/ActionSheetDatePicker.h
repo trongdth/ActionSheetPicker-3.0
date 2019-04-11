@@ -62,7 +62,7 @@ typedef void(^ActionDateCancelBlock)(ActionSheetDatePicker *picker);
              selectedDate:(NSDate *)selectedDate
                 doneBlock:(ActionDateDoneBlock)doneBlock
               cancelBlock:(ActionDateCancelBlock)cancelBlock
-                   origin:(UIView*)view;
+                   origin:(id)origin;
 
 + (instancetype)showPickerWithTitle:(NSString *)title
            datePickerMode:(UIDatePickerMode)datePickerMode
@@ -71,7 +71,7 @@ typedef void(^ActionDateCancelBlock)(ActionSheetDatePicker *picker);
               maximumDate:(NSDate *)maximumDate
                 doneBlock:(ActionDateDoneBlock)doneBlock
               cancelBlock:(ActionDateCancelBlock)cancelBlock
-                   origin:(UIView*)view;
+                   origin:(id)origin;
 
 
 - (id)initWithTitle:(NSString *)title datePickerMode:(UIDatePickerMode)datePickerMode selectedDate:(NSDate *)selectedDate target:(id)target action:(SEL)action origin:(id)origin;
