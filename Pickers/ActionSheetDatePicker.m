@@ -68,14 +68,14 @@
              selectedDate:(NSDate *)selectedDate
                 doneBlock:(ActionDateDoneBlock)doneBlock
               cancelBlock:(ActionDateCancelBlock)cancelBlock
-                   origin:(UIView*)view
+                   origin:(id)origin
 {
     ActionSheetDatePicker* picker = [[ActionSheetDatePicker alloc] initWithTitle:title
                                                                   datePickerMode:datePickerMode
                                                                     selectedDate:selectedDate
                                                                        doneBlock:doneBlock
                                                                      cancelBlock:cancelBlock
-                                                                          origin:view];
+                                                                          origin:origin];
     [picker showActionSheetPicker];
     return picker;
 }
@@ -87,14 +87,14 @@
               maximumDate:(NSDate *)maximumDate
                 doneBlock:(ActionDateDoneBlock)doneBlock
               cancelBlock:(ActionDateCancelBlock)cancelBlock
-                   origin:(UIView*)view
+                   origin:(id)origin
 {
     ActionSheetDatePicker* picker = [[ActionSheetDatePicker alloc] initWithTitle:title
                                                                   datePickerMode:datePickerMode
                                                                     selectedDate:selectedDate
                                                                        doneBlock:doneBlock
                                                                      cancelBlock:cancelBlock
-                                                                          origin:view];
+                                                                          origin:origin];
     [picker setMinimumDate:minimumDate];
     [picker setMaximumDate:maximumDate];
     [picker showActionSheetPicker];
