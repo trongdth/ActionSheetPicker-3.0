@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "vinhtnk",
+      "name": "Vinh Tran",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/10373392?v=4",
+      "profile": "https://github.com/vinhtnk",
+      "contributions": [
+        "security",
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "ActionSheetPicker-3.0",
+  "projectOwner": "skywinder",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
