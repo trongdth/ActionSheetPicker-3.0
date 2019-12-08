@@ -710,6 +710,7 @@ CG_INLINE BOOL isIPhone4() {
 - (void)configureAndPresentPopoverForView:(UIView *)aView {
     UIViewController *viewController = [[UIViewController alloc] initWithNibName:nil bundle:nil];
     
+    #if __IPHONE_OS_VERSION_MIN_REQUIRED >= 110000
     if (@available(iOS 11, *)) {
         [viewController.view addSubview:aView];
         UILayoutGuide* guide = viewController.view.safeAreaLayoutGuide;
@@ -721,7 +722,10 @@ CG_INLINE BOOL isIPhone4() {
     } else {
         viewController.view = aView;
     }
-
+#else
+        viewController.view = aView;
+#endif
+    
     if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "UnavailableInDeploymentTarget"
