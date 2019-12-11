@@ -804,6 +804,12 @@ CG_INLINE BOOL isIPhone4() {
 
 #pragma mark - Popoverdelegate
 
+- (BOOL)popoverControllerShouldDismissPopover:(UIPopoverController *)popoverController
+{
+    [self dismissPicker];
+    return YES;
+}
+
 - (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
     switch (self.tapDismissAction) {
         case TapActionSuccess: {
