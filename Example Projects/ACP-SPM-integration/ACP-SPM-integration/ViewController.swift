@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func acp_call(_ sender: Any) {
-        ActionSheetStringPicker.show(withTitle: "Picker from navigation bar",
+         ActionSheetStringPicker.show(withTitle: "Picker from navigation bar",
                                             rows: ["One", "Two", "A lot"],
                                             initialSelection: 1,
                                             doneBlock: { picker, value, index in

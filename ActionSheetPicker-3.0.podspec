@@ -23,7 +23,7 @@ Pod::Spec.new do |spec|
   spec.social_media_url   = "https://twitter.com/skywinder/"
   spec.platform     = :ios, "6.1"
   spec.source = { :git => 'https://github.com/skywinder/ActionSheetPicker-3.0.git', :tag => "#{spec.version}" }
-  spec.source_files = 'Pickers/*.{h,m}'
+  spec.source_files = 'CoreActionSheetPicker/CoreActionSheetPicker/*.{h,m}'
   spec.framework = 'UIKit'
   spec.requires_arc = true
 end
