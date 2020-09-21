@@ -106,6 +106,14 @@ typedef void(^ActionDateCancelBlock)(ActionSheetDatePicker *picker);
                   cancelBlock:(ActionDateCancelBlock)cancelBlock
                        origin:(UIView*)view;
 
+- (instancetype)initWithTitle:(NSString *)title
+                       locale:(NSLocale *)locale
+               datePickerMode:(UIDatePickerMode)datePickerMode
+                 selectedDate:(NSDate *)selectedDate
+                    doneBlock:(ActionDateDoneBlock)doneBlock
+                  cancelBlock:(ActionDateCancelBlock)cancelBlock
+                       origin:(UIView*)origin;
+
 - (void)eventForDatePicker:(id)sender;
 
 @end

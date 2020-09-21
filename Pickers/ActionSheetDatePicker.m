@@ -156,6 +156,23 @@
     return self;
 }
 
+- (instancetype)initWithTitle:(NSString *)title
+                       locale:(NSLocale *)locale
+               datePickerMode:(UIDatePickerMode)datePickerMode
+                 selectedDate:(NSDate *)selectedDate
+                    doneBlock:(ActionDateDoneBlock)doneBlock
+                  cancelBlock:(ActionDateCancelBlock)cancelBlock
+                       origin:(UIView*)origin
+{
+    self = [self initWithTitle:title datePickerMode:datePickerMode selectedDate:selectedDate target:nil action:nil origin:origin];
+    if (self) {
+        self.onActionSheetDone = doneBlock;
+        self.onActionSheetCancel = cancelBlock;
+        self.locale = locale;
+    }
+    return self;
+}
+
 - (UIView *)configuredPickerView {
     CGRect datePickerFrame = CGRectMake(0, 40, self.viewSize.width, 216);
     UIDatePicker *datePicker = [[UIDatePicker alloc] initWithFrame:datePickerFrame];
